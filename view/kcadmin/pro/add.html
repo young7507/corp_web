@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>产品展示添加</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/kcadmin/css/style.css">
+    <script src="/static/kcadmin/ueditor/ueditor.config.js"></script>
+    <script src="/static/kcadmin/ueditor/ueditor.all.min.js"></script>
+</head>
+<body>
+<div class="container-fluid p-3">
+    <div class="panel-heading d-flex justify-content-between align-items-center">
+        <span>产品展示添加</span>
+        <div>
+            <a href="{:url('pro/index')}" class="btn btn-sm btn-outline-secondary">产品列表</a>
+            <a href="{:url('cate/product')}" class="btn btn-sm btn-outline-secondary">分类管理</a>
+        </div>
+    </div>
+    <form id="addForm" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>标题(title)</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="请输入标题">
+        </div>
+        <div class="form-group">
+            <label>副标题(subtitle)</label>
+            <input type="text" class="form-control" name="subtitle" id="subtitle" placeholder="请输入副标题">
+        </div>
+        <div class="form-group">
+            <label>所属分类(category)</label>
+            <select class="form-control" name="category" id="category"></select>
+        </div>
+        <div class="form-group">
+            <label>缩略图</label>
+            <input type="file" class="form-control" name="thumb" id="thumb" accept="image/jpeg,image/png">
+        </div>
+        <div class="form-group">
+            <label>内容(content)</label>
+            <script id="editor" type="text/plain" style="width:100%;height:350px;"></script>
+        </div>
+        <div class="form-group">
+            <label>是否推荐(tui)</label>
+            <select class="form-control" name="tui" id="tui">
+                <option value="0">否</option>
+                <option value="1">是</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>排序(ord)</label>
+            <input type="number" class="form-control" name="ord" id="ord" value="0">
+        </div>
+        <button type="button" class="btn btn-primary" id="submitBtn">提交</button>
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='{:url("pro/index")}'">返回</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
+<script src="/static/kcadmin/js/common.js"></script>
+<script>
+var PRO_INDEX_URL = '{:url("pro/index")}';
+var UEDITOR_SERVER_URL = '{:url("ueditor/index")}?token=' + (localStorage.getItem('token') || '');
+</script>
+{literal}
+<script>
+    var ue = UE.getEditor('editor',{serverUrl: UEDITOR_SERVER_URL,toolbars:[['fullscreen', 'source', '|' , 'undo', 'redo', '|' ,'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|' , 'fontfamily', 'fontsize', '|','simpleupload', 'insertimage', 'emotion','|' , 'insertvideo',  'attachment',  'gmap', '|' ,'link', 'unlink', 'anchor',],['bold', 'italic', '|' , 'underline',  '|' ,'insertorderedlist', 'insertunorderedlist',  '|' ,'fontborder', 'strikethrough',  '|' ,'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', '|' ,  'selectall', 'cleardoc', '|' ,'date', 'time', '|' , 'spechars' ]],initialFrameWidth:null,initialFrameHeight:320,enterTag: 'br',wordCount:false});
+    $(function() {
+        axiosGet(API_BASE + '/cate/getList', {'ctype': 1}, function(res) {
+            var list = res.data || [];
+            var html = '';
+            list.forEach(function(item) {
+                html += '<option value="' + item.id + '">' + item.catename + '</option>';
+            });
+            $('#category').html(html);
+        });
+        $('#submitBtn').click(function() {
+            var title = $('#title').val();
+            var subtitle = $('#subtitle').val();
+            var category = $('#category').val();
+            var content = ue.getContent();
+            var ord = $('#ord').val();
+            if (!title || !subtitle || !category || !content || ord === '') {
+                alert('标题、副标题、分类、内容、排序不能为空');
+                return;
+            }
+            var fd = new FormData($('#addForm')[0]);
+            fd.set('content', content);
+            axiosPost(API_BASE + '/pro/insert', fd, function(res) {
+                alert(res.msg);
+                window.location.href = PRO_INDEX_URL;
+            });
+        });
+    });
+</script>
+{/literal}
+</body>
+</html>

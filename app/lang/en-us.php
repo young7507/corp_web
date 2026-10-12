@@ -1,0 +1,20 @@
+<?php
+return [
+    'sys_sitename'    => 'Macheng Kangxin Home Nursing Home',
+    'sys_sitetitle'   => 'Macheng Kangxin Home Nursing Home',
+    'sys_key'         => 'Kangxin,Kangxin Home,Nursing,Nursing Home,Kangxin Home Nursing Home,Macheng,Macheng City,Macheng Kangxin,Macheng Kangxin Home,Macheng Nursing,Macheng Nursing Home,Macheng Kangxin Home Nursing Home',
+    'sys_description' => 'Macheng Kangxin Home Nursing Home',
+    'sys_mail'        => 'yangzhaohui@kangxinhome.com1',
+    'sys_tel'         => '0713-26284211',
+    'sys_addr'        => 'No.1 Special, Jingjiashan Road, Baiguo Town, Macheng City',
+    'sys_website'     => 'http://education.eyesyang.com/',
+    'sys_icp'         => 'E ICP No.2021013641-1',
+    'sys_mnav_home'    => 'Home',
+    'sys_mnav_about'   => 'About Us',
+    'sys_mnav_contact' => 'Contact Us',
+    'sys_mnav_news'    => 'News',
+    'sys_mnav_product' => 'Products',
+    'sys_mnav_case'    => 'Cases',
+    'sys_mnav_join'    => 'Join Us',
+    'sys_mnav_message' => 'Message Board',
+];

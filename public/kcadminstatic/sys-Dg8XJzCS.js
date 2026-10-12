@@ -1,0 +1,1 @@
+import{aT as n,cy as r,r as c}from"./index-CcKDY4FV.js";const e="kcadmin_sys",y=()=>c.get("/sys/getmenu"),o=async()=>{const s=n(e);if(s)try{const t=JSON.parse(s);if(t&&t.mnav&&Object.keys(t.mnav).length>0)return t}catch{}try{const t=await y(),a=(t==null?void 0:t.sys)||{};return r(e,JSON.stringify(a)),a}catch{return{}}};export{o as g};

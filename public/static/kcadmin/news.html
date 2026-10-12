@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>最新消息管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container-fluid p-3">
+    <div class="panel-heading">最新消息管理</div>
+    <div style="margin-bottom:10px;">
+        <button class="btn btn-primary btn-sm" onclick="window.location.href='news_add.html'">添加消息</button>
+    </div>
+    <table id="dg" class="easyui-datagrid" style="width:100%;height:450px;"
+        data-options="singleSelect:true,pagination:true,rownumbers:true,fitColumns:true">
+        <thead>
+            <tr>
+                <th data-options="field:'id',width:60">ID</th>
+                <th data-options="field:'title',width:150">标题</th>
+                <th data-options="field:'subtitle',width:120">副标题</th>
+                <th data-options="field:'cate',width:80,formatter:cateFormatter">分类</th>
+                <th data-options="field:'thumb',width:100,formatter:imgFormatter">缩略图</th>
+                <th data-options="field:'tui',width:60,formatter:tuiFormatter">推荐</th>
+                <th data-options="field:'pubtime',width:140,formatter:timeFormatter">发布时间</th>
+                <th data-options="field:'ord',width:60">排序</th>
+                <th data-options="field:'_op',width:180,formatter:opFormatter">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="editDlg" class="easyui-dialog" title="编辑消息" style="width:600px;height:550px;padding:20px;overflow:auto;" data-options="closed:true,modal:true">
+    <form id="editForm" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" id="editId">
+        <div class="form-group">
+            <label>标题(title)</label>
+            <input type="text" class="form-control" name="title" id="editTitle">
+        </div>
+        <div class="form-group">
+            <label>副标题(subtitle)</label>
+            <input type="text" class="form-control" name="subtitle" id="editSubtitle">
+        </div>
+        <div class="form-group">
+            <label>所属分类(category)</label>
+            <select class="form-control" name="category" id="editCate"></select>
+        </div>
+        <div class="form-group">
+            <label>缩略图</label>
+            <input type="file" class="form-control" name="thumb" id="editThumb" accept="image/jpeg,image/png">
+            <div id="editThumbPreview" style="margin-top:5px;"></div>
+        </div>
+        <div class="form-group">
+            <label>内容(content)</label>
+            <textarea class="form-control" name="content" id="editWebcon" rows="6"></textarea>
+        </div>
+        <div class="form-group">
+            <label>是否推荐(istui)</label>
+            <select class="form-control" name="istui" id="editTui">
+                <option value="0">否</option>
+                <option value="1">是</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>排序(ord)</label>
+            <input type="number" class="form-control" name="ord" id="editOrd" value="0">
+        </div>
+        <button type="button" class="btn btn-primary" id="editSubmitBtn">提交</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+<script src="js/easyui/jquery.easyui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    var cateMap = {};
+    function loadCates() {
+        axiosGet(API_BASE + '/cate/getList', { ctype: 2 }, function(res) {
+            var list = res.data || [];
+            var html = '';
+            list.forEach(function(item) {
+                cateMap[item.id] = item.cate;
+                html += '<option value="' + item.id + '">' + item.cate + '</option>';
+            });
+            $('#editCate').html(html);
+        });
+    }
+    function cateFormatter(val) { return cateMap[val] || val; }
+    function imgFormatter(val) {
+        if (val) return '<img src="/' + val + '" height="40">';
+        return '';
+    }
+    function tuiFormatter(val) { return val == 1 ? '<span class="text-success">是</span>' : '否'; }
+    function timeFormatter(val) { return formatTimestamp(val); }
+    function opFormatter(val, row) {
+        return '<a href="javascript:void(0)" onclick="editRow(' + row.id + ')">编辑</a> ' +
+               '<a href="javascript:void(0)" onclick="delRow(' + row.id + ')">删除</a> ' +
+               '<a href="javascript:void(0)" onclick="toggleTui(' + row.id + ',' + (row.tui == 1 ? 0 : 1) + ')">' + (row.tui == 1 ? '取消推荐' : '设为推荐') + '</a>';
+    }
+
+    function loadData() {
+        axiosGet(API_BASE + '/news/index', { page: 1, rows: 20 }, function(res) {
+            $('#dg').datagrid('loadData', { total: res.data.total, rows: res.data.rows });
+        });
+    }
+
+    $(function() {
+        loadCates();
+        loadData();
+        $('#editSubmitBtn').click(function() {
+            var fd = new FormData($('#editForm')[0]);
+            axiosPost(API_BASE + '/news/update', fd, function(res) {
+                alert(res.msg);
+                $('#editDlg').dialog('close');
+                loadData();
+            });
+        });
+    });
+
+    function editRow(id) {
+        var rows = $('#dg').datagrid('getRows');
+        var row = rows.find(function(r) { return r.id == id; });
+        if (!row) return;
+        $('#editId').val(row.id);
+        $('#editTitle').val(row.title);
+        $('#editSubtitle').val(row.subtitle);
+        $('#editCate').val(row.cate);
+        $('#editWebcon').val(row.webcon);
+        $('#editTui').val(row.tui);
+        $('#editOrd').val(row.ord);
+        $('#editThumbPreview').html(row.thumb ? '<img src="/' + row.thumb + '" height="60">' : '');
+        $('#editThumb').val('');
+        $('#editDlg').dialog('open');
+    }
+
+    function delRow(id) {
+        if (!confirm('确定删除？')) return;
+        axiosPost(API_BASE + '/news/del', { id: id }, function(res) {
+            alert(res.msg);
+            loadData();
+        });
+    }
+
+    function toggleTui(id, tui) {
+        axiosPost(API_BASE + '/news/updateStatus', { id: id, tui: tui }, function(res) {
+            loadData();
+        });
+    }
+</script>
+</body>
+</html>

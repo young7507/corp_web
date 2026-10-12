@@ -1,0 +1,1 @@
+import{r as e}from"./index-CcKDY4FV.js";const s=t=>e.get("/cate/index",{params:t}),r=t=>e.get("/cate/getList",{params:{ctype:t}}),n=t=>e.post("/cate/insert",t),o=t=>e.post("/cate/update",t),c=t=>e.post("/cate/delete",{id:t});export{s as a,n as b,c as d,r as g,o as u};

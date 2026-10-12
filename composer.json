@@ -1,0 +1,30 @@
+{
+    "name": "corp-web/www",
+    "description": "企业官网后台管理系统",
+    "type": "project",
+    "keywords": [
+        "thinkphp",
+        "corp-web"
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "topthink/framework": "^6.1",
+        "topthink/think-multi-app": "^1.0",
+        "topthink/think-view": "^1.0",
+        "topthink/think-captcha": "^3.0",
+        "topthink/think-template": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php think service:discover"
+        ]
+    }
+}

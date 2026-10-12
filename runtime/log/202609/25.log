@@ -1,0 +1,181 @@
+[2026-09-25T23:25:58+08:00][sql] CONNECT:[ UseTime:0.016830s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:25:58+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.010196s ]
+[2026-09-25T23:25:58+08:00][sql] SELECT * FROM `lh_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000714s ]
+[2026-09-25T23:25:58+08:00][sql] UPDATE `lh_admin`  SET `token` = 'dd8c6e64b6b1d741f648a84f683bb2e7'  WHERE  `id` = 1 [ RunTime:0.001098s ]
+[2026-09-25T23:25:59+08:00][sql] CONNECT:[ UseTime:0.001184s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:25:59+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.061187s ]
+[2026-09-25T23:25:59+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'dd8c6e64b6b1d741f648a84f683bb2e7' LIMIT 1 [ RunTime:0.000799s ]
+[2026-09-25T23:25:59+08:00][sql] CONNECT:[ UseTime:0.001304s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:25:59+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.016199s ]
+[2026-09-25T23:25:59+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'dd8c6e64b6b1d741f648a84f683bb2e7' LIMIT 1 [ RunTime:0.001226s ]
+[2026-09-25T23:35:00+08:00][error] [8192]imagefilledpolygon(): Using the $num_points parameter is deprecated[D:\web\php\thinkphp\corp-web\www\app\kcadminapi\controller\Slideverify.php:46]
+[2026-09-25T23:35:15+08:00][error] [8192]imagefilledpolygon(): Using the $num_points parameter is deprecated[D:\web\php\thinkphp\corp-web\www\app\kcadminapi\controller\Slideverify.php:46]
+[2026-09-25T23:35:17+08:00][error] [8192]imagefilledpolygon(): Using the $num_points parameter is deprecated[D:\web\php\thinkphp\corp-web\www\app\kcadminapi\controller\Slideverify.php:46]
+[2026-09-25T23:38:07+08:00][error] [8192]imagepolygon(): Using the $num_points parameter is deprecated[D:\web\php\thinkphp\corp-web\www\app\kcadminapi\controller\Slideverify.php:95]
+[2026-09-25T23:38:11+08:00][error] [8192]imagepolygon(): Using the $num_points parameter is deprecated[D:\web\php\thinkphp\corp-web\www\app\kcadminapi\controller\Slideverify.php:95]
+[2026-09-25T23:38:37+08:00][sql] CONNECT:[ UseTime:0.021605s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:38:37+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.015212s ]
+[2026-09-25T23:38:37+08:00][sql] SELECT * FROM `lh_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.001060s ]
+[2026-09-25T23:38:37+08:00][sql] UPDATE `lh_admin`  SET `token` = 'a769030e028ca687f0166d6863ec602b'  WHERE  `id` = 1 [ RunTime:0.001320s ]
+[2026-09-25T23:38:39+08:00][sql] CONNECT:[ UseTime:0.002328s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:38:39+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.025284s ]
+[2026-09-25T23:38:39+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.001247s ]
+[2026-09-25T23:38:39+08:00][sql] CONNECT:[ UseTime:0.002173s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:38:39+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.027583s ]
+[2026-09-25T23:38:39+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.001096s ]
+[2026-09-25T23:38:48+08:00][sql] CONNECT:[ UseTime:0.001926s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:38:48+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.017030s ]
+[2026-09-25T23:38:48+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000872s ]
+[2026-09-25T23:38:48+08:00][sql] SHOW FULL COLUMNS FROM `lh_altplay` [ RunTime:0.015451s ]
+[2026-09-25T23:38:48+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_altplay` LIMIT 1 [ RunTime:0.000729s ]
+[2026-09-25T23:38:48+08:00][sql] SELECT * FROM `lh_altplay` ORDER BY `ord` ASC,`id` DESC LIMIT 0,20 [ RunTime:0.000640s ]
+[2026-09-25T23:38:51+08:00][sql] CONNECT:[ UseTime:0.002328s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:38:51+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.019791s ]
+[2026-09-25T23:38:51+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000864s ]
+[2026-09-25T23:38:51+08:00][sql] SHOW FULL COLUMNS FROM `lh_sys` [ RunTime:0.017607s ]
+[2026-09-25T23:38:51+08:00][sql] SELECT * FROM `lh_sys` WHERE  `webkey` = 'AboutUs' LIMIT 1 [ RunTime:0.000871s ]
+[2026-09-25T23:38:54+08:00][sql] CONNECT:[ UseTime:0.002434s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:38:54+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.032895s ]
+[2026-09-25T23:38:54+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000806s ]
+[2026-09-25T23:38:54+08:00][sql] SHOW FULL COLUMNS FROM `lh_sys` [ RunTime:0.018591s ]
+[2026-09-25T23:38:54+08:00][sql] SELECT * FROM `lh_sys` WHERE  `webkey` = 'ContactUs' LIMIT 1 [ RunTime:0.014109s ]
+[2026-09-25T23:38:58+08:00][sql] CONNECT:[ UseTime:0.001425s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:38:58+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.020638s ]
+[2026-09-25T23:38:58+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.001409s ]
+[2026-09-25T23:38:58+08:00][sql] SHOW FULL COLUMNS FROM `lh_sys` [ RunTime:0.012841s ]
+[2026-09-25T23:38:58+08:00][sql] SELECT * FROM `lh_sys` WHERE  `webkey` = 'ABExt' OR `webkey` = 'ProExt'  OR `webkey` = 'NewsExt'  OR `webkey` = 'CTExt'  OR `webkey` = 'MSGExt'  OR `webkey` = 'DevlpExt' ORDER BY `id` ASC [ RunTime:0.001678s ]
+[2026-09-25T23:39:02+08:00][sql] CONNECT:[ UseTime:0.001484s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:02+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.016650s ]
+[2026-09-25T23:39:02+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000850s ]
+[2026-09-25T23:39:02+08:00][sql] SHOW FULL COLUMNS FROM `lh_history` [ RunTime:0.017422s ]
+[2026-09-25T23:39:02+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_history` LIMIT 1 [ RunTime:0.000817s ]
+[2026-09-25T23:39:02+08:00][sql] SELECT * FROM `lh_history` ORDER BY `hisord` ASC,`id` DESC LIMIT 0,20 [ RunTime:0.000752s ]
+[2026-09-25T23:39:06+08:00][sql] CONNECT:[ UseTime:0.001501s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:06+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.033994s ]
+[2026-09-25T23:39:06+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.001314s ]
+[2026-09-25T23:39:06+08:00][sql] SHOW FULL COLUMNS FROM `lh_product` [ RunTime:0.013633s ]
+[2026-09-25T23:39:06+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_product` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` LIMIT 1 [ RunTime:0.001047s ]
+[2026-09-25T23:39:06+08:00][sql] SELECT `p`.*,`c`.`catename` FROM `lh_product` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` ORDER BY `p`.`ord` ASC,`p`.`id` DESC LIMIT 0,20 [ RunTime:0.001347s ]
+[2026-09-25T23:39:14+08:00][sql] CONNECT:[ UseTime:0.001528s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:14+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.046989s ]
+[2026-09-25T23:39:14+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.001455s ]
+[2026-09-25T23:39:14+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.020327s ]
+[2026-09-25T23:39:14+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_cate` WHERE  `ctype` = 1 LIMIT 1 [ RunTime:0.000967s ]
+[2026-09-25T23:39:14+08:00][sql] SELECT * FROM `lh_cate` WHERE  `ctype` = 1 ORDER BY `ord` ASC,`id` DESC LIMIT 0,20 [ RunTime:0.000770s ]
+[2026-09-25T23:39:18+08:00][sql] CONNECT:[ UseTime:0.002156s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:18+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.018558s ]
+[2026-09-25T23:39:18+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000810s ]
+[2026-09-25T23:39:18+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.016581s ]
+[2026-09-25T23:39:18+08:00][sql] SELECT * FROM `lh_cate` WHERE  `ctype` = 2 ORDER BY `ord` ASC [ RunTime:0.001376s ]
+[2026-09-25T23:39:19+08:00][sql] CONNECT:[ UseTime:0.001590s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:19+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.018307s ]
+[2026-09-25T23:39:19+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000787s ]
+[2026-09-25T23:39:19+08:00][sql] SHOW FULL COLUMNS FROM `lh_news` [ RunTime:0.018364s ]
+[2026-09-25T23:39:19+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_news` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` LIMIT 1 [ RunTime:0.001156s ]
+[2026-09-25T23:39:19+08:00][sql] SELECT `p`.*,`c`.`catename` FROM `lh_news` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` ORDER BY `p`.`ord` ASC,`p`.`id` DESC LIMIT 0,20 [ RunTime:0.004009s ]
+[2026-09-25T23:39:21+08:00][sql] CONNECT:[ UseTime:0.001510s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:21+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.035923s ]
+[2026-09-25T23:39:21+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.001370s ]
+[2026-09-25T23:39:21+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.024490s ]
+[2026-09-25T23:39:21+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_cate` WHERE  `ctype` = 2 LIMIT 1 [ RunTime:0.000791s ]
+[2026-09-25T23:39:21+08:00][sql] SELECT * FROM `lh_cate` WHERE  `ctype` = 2 ORDER BY `ord` ASC,`id` DESC LIMIT 0,20 [ RunTime:0.000622s ]
+[2026-09-25T23:39:32+08:00][sql] CONNECT:[ UseTime:0.013807s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:32+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.009738s ]
+[2026-09-25T23:39:32+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000770s ]
+[2026-09-25T23:39:32+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.008574s ]
+[2026-09-25T23:39:32+08:00][sql] SELECT * FROM `lh_cate` WHERE  `catename` = 'AAAAAAA'  AND `ctype` = 2 LIMIT 1 [ RunTime:0.000777s ]
+[2026-09-25T23:39:39+08:00][sql] CONNECT:[ UseTime:0.024854s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:39+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.009141s ]
+[2026-09-25T23:39:39+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000819s ]
+[2026-09-25T23:39:39+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.009220s ]
+[2026-09-25T23:39:39+08:00][sql] SELECT * FROM `lh_cate` WHERE  `catename` = 'AAAAAAA'  AND `ctype` = 2 LIMIT 1 [ RunTime:0.000828s ]
+[2026-09-25T23:39:41+08:00][sql] CONNECT:[ UseTime:0.023456s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:41+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.009910s ]
+[2026-09-25T23:39:41+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000829s ]
+[2026-09-25T23:39:41+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.009563s ]
+[2026-09-25T23:39:41+08:00][sql] SELECT * FROM `lh_cate` WHERE  `catename` = 'AAAAAAA'  AND `ctype` = 2 LIMIT 1 [ RunTime:0.000712s ]
+[2026-09-25T23:39:48+08:00][sql] CONNECT:[ UseTime:0.001198s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:39:48+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.010334s ]
+[2026-09-25T23:39:48+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000728s ]
+[2026-09-25T23:39:48+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.010217s ]
+[2026-09-25T23:39:48+08:00][sql] SELECT * FROM `lh_cate` WHERE  `catename` = 'AAAAAAA'  AND `ctype` = 2 LIMIT 1 [ RunTime:0.000730s ]
+[2026-09-25T23:40:22+08:00][sql] CONNECT:[ UseTime:0.019795s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:40:22+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.009697s ]
+[2026-09-25T23:40:22+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000719s ]
+[2026-09-25T23:40:22+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.009948s ]
+[2026-09-25T23:40:22+08:00][sql] SELECT * FROM `lh_cate` WHERE  `catename` = 'AAAAAAA'  AND `ctype` = 2 LIMIT 1 [ RunTime:0.000769s ]
+[2026-09-25T23:40:23+08:00][sql] CONNECT:[ UseTime:0.014520s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:40:23+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.009691s ]
+[2026-09-25T23:40:23+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000666s ]
+[2026-09-25T23:40:23+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.009386s ]
+[2026-09-25T23:40:23+08:00][sql] SELECT * FROM `lh_cate` WHERE  `catename` = 'AAAAAAA'  AND `ctype` = 2 LIMIT 1 [ RunTime:0.000802s ]
+[2026-09-25T23:40:42+08:00][sql] CONNECT:[ UseTime:0.002284s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:40:42+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.030552s ]
+[2026-09-25T23:40:42+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000857s ]
+[2026-09-25T23:40:42+08:00][sql] SHOW FULL COLUMNS FROM `lh_news` [ RunTime:0.016619s ]
+[2026-09-25T23:40:42+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_news` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` LIMIT 1 [ RunTime:0.000767s ]
+[2026-09-25T23:40:42+08:00][sql] SELECT `p`.*,`c`.`catename` FROM `lh_news` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` ORDER BY `p`.`ord` ASC,`p`.`id` DESC LIMIT 0,20 [ RunTime:0.001381s ]
+[2026-09-25T23:40:51+08:00][sql] CONNECT:[ UseTime:0.001326s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:40:51+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.040203s ]
+[2026-09-25T23:40:51+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000869s ]
+[2026-09-25T23:40:51+08:00][sql] SHOW FULL COLUMNS FROM `lh_news` [ RunTime:0.018331s ]
+[2026-09-25T23:40:51+08:00][sql] SELECT * FROM `lh_news` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.000903s ]
+[2026-09-25T23:40:51+08:00][sql] CONNECT:[ UseTime:0.001342s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:40:51+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.032206s ]
+[2026-09-25T23:40:51+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000613s ]
+[2026-09-25T23:40:51+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.018608s ]
+[2026-09-25T23:40:51+08:00][sql] SELECT * FROM `lh_cate` WHERE  `ctype` = 2 ORDER BY `ord` ASC [ RunTime:0.000628s ]
+[2026-09-25T23:41:07+08:00][sql] CONNECT:[ UseTime:0.019011s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:41:07+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.009535s ]
+[2026-09-25T23:41:07+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000684s ]
+[2026-09-25T23:41:07+08:00][sql] SHOW FULL COLUMNS FROM `lh_news` [ RunTime:0.009529s ]
+[2026-09-25T23:41:07+08:00][sql] SELECT * FROM `lh_news` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.000682s ]
+[2026-09-25T23:41:07+08:00][sql] UPDATE `lh_news`  SET `title` = '开心体检111' , `subtitle` = '娱乐开心娱乐开心11' , `content` = '<p>湖北麻城市<img src=\"/uploads/wangeditor/20260913220726_1789308446.jpg\" alt=\"\" data-href=\"\" style=\"\"/>1111111111111</p>' , `ord` = 6  WHERE  `id` = 6 [ RunTime:0.001507s ]
+[2026-09-25T23:41:08+08:00][sql] CONNECT:[ UseTime:0.001672s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:41:08+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.026330s ]
+[2026-09-25T23:41:08+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000824s ]
+[2026-09-25T23:41:08+08:00][sql] SHOW FULL COLUMNS FROM `lh_news` [ RunTime:0.012271s ]
+[2026-09-25T23:41:08+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_news` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` LIMIT 1 [ RunTime:0.000845s ]
+[2026-09-25T23:41:08+08:00][sql] SELECT `p`.*,`c`.`catename` FROM `lh_news` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` ORDER BY `p`.`ord` ASC,`p`.`id` DESC LIMIT 0,20 [ RunTime:0.001258s ]
+[2026-09-25T23:41:23+08:00][sql] CONNECT:[ UseTime:0.020914s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:41:23+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.008928s ]
+[2026-09-25T23:41:23+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000802s ]
+[2026-09-25T23:41:23+08:00][sql] SHOW FULL COLUMNS FROM `lh_news` [ RunTime:0.010477s ]
+[2026-09-25T23:41:23+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_news` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` LIMIT 1 [ RunTime:0.000682s ]
+[2026-09-25T23:41:23+08:00][sql] SELECT `p`.*,`c`.`catename` FROM `lh_news` `p` LEFT JOIN `lh_cate` `c` ON `p`.`cate`=`c`.`id` ORDER BY `p`.`ord` ASC,`p`.`id` DESC LIMIT 0,10 [ RunTime:0.000994s ]
+[2026-09-25T23:41:38+08:00][sql] CONNECT:[ UseTime:0.001849s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:41:38+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.017069s ]
+[2026-09-25T23:41:38+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000769s ]
+[2026-09-25T23:41:38+08:00][sql] SHOW FULL COLUMNS FROM `lh_news` [ RunTime:0.017504s ]
+[2026-09-25T23:41:38+08:00][sql] SELECT * FROM `lh_news` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.001067s ]
+[2026-09-25T23:41:38+08:00][sql] CONNECT:[ UseTime:0.001619s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:41:38+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.018546s ]
+[2026-09-25T23:41:38+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000732s ]
+[2026-09-25T23:41:38+08:00][sql] SHOW FULL COLUMNS FROM `lh_cate` [ RunTime:0.017909s ]
+[2026-09-25T23:41:38+08:00][sql] SELECT * FROM `lh_cate` WHERE  `ctype` = 2 ORDER BY `ord` ASC [ RunTime:0.001064s ]
+[2026-09-25T23:41:51+08:00][sql] CONNECT:[ UseTime:0.001407s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:41:51+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.037811s ]
+[2026-09-25T23:41:51+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000931s ]
+[2026-09-25T23:41:51+08:00][sql] SHOW FULL COLUMNS FROM `lh_altplay` [ RunTime:0.033054s ]
+[2026-09-25T23:41:51+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_altplay` LIMIT 1 [ RunTime:0.000762s ]
+[2026-09-25T23:41:51+08:00][sql] SELECT * FROM `lh_altplay` ORDER BY `ord` ASC,`id` DESC LIMIT 0,20 [ RunTime:0.000578s ]
+[2026-09-25T23:41:56+08:00][sql] CONNECT:[ UseTime:0.001285s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:41:56+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.030027s ]
+[2026-09-25T23:41:56+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000925s ]
+[2026-09-25T23:41:56+08:00][sql] SHOW FULL COLUMNS FROM `lh_sys` [ RunTime:0.033484s ]
+[2026-09-25T23:41:56+08:00][sql] SELECT * FROM `lh_sys` WHERE  `webkey` = 'ContactUs' LIMIT 1 [ RunTime:0.000728s ]
+[2026-09-25T23:41:58+08:00][sql] CONNECT:[ UseTime:0.001205s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:41:58+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.031960s ]
+[2026-09-25T23:41:58+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = 'a769030e028ca687f0166d6863ec602b' LIMIT 1 [ RunTime:0.000687s ]
+[2026-09-25T23:41:58+08:00][sql] SHOW FULL COLUMNS FROM `lh_sys` [ RunTime:0.013256s ]
+[2026-09-25T23:41:58+08:00][sql] SELECT * FROM `lh_sys` WHERE  `webkey` = 'AboutUs' LIMIT 1 [ RunTime:0.000724s ]
+[2026-09-25T23:45:36+08:00][sql] CONNECT:[ UseTime:0.001896s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:45:36+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.010234s ]
+[2026-09-25T23:45:36+08:00][sql] SELECT * FROM `lh_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000890s ]
+[2026-09-25T23:45:36+08:00][sql] UPDATE `lh_admin`  SET `token` = '041b5bd4634e85fa82f0374ea3f5a052'  WHERE  `id` = 1 [ RunTime:0.001222s ]
+[2026-09-25T23:45:42+08:00][sql] CONNECT:[ UseTime:0.011702s ] mysql:host=127.0.0.1;port=3306;dbname=entweb;charset=utf8mb4
+[2026-09-25T23:45:42+08:00][sql] SHOW FULL COLUMNS FROM `lh_admin` [ RunTime:0.014691s ]
+[2026-09-25T23:45:42+08:00][sql] SELECT * FROM `lh_admin` WHERE  `token` = '041b5bd4634e85fa82f0374ea3f5a052' LIMIT 1 [ RunTime:0.000737s ]
+[2026-09-25T23:45:42+08:00][sql] SHOW FULL COLUMNS FROM `lh_altplay` [ RunTime:0.014935s ]
+[2026-09-25T23:45:42+08:00][sql] SELECT COUNT(*) AS think_count FROM `lh_altplay` LIMIT 1 [ RunTime:0.000857s ]
+[2026-09-25T23:45:42+08:00][sql] SELECT * FROM `lh_altplay` ORDER BY `ord` ASC,`id` DESC LIMIT 0,20 [ RunTime:0.000829s ]

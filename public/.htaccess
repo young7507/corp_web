@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks -Multiviews
+  RewriteEngine On
+
+  RewriteRule ^kcxxadmin/kcadminstatic/(.*)$ kcadminstatic/$1 [L]
+  RewriteRule ^kcxxadmin/indexstatic/(.*)$ indexstatic/$1 [L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^index(/.*)?$ frontindex.html [QSA,PT,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^kcxxadmin(/.*)?$ kcadmin.html [QSA,PT,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+</IfModule>

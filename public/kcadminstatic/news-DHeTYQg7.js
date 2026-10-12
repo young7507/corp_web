@@ -1,0 +1,1 @@
+import{r as s}from"./index-CcKDY4FV.js";const r=e=>s.get("/news/indexlist",{params:e}),o=e=>s.get("/news/getinfo",{params:{id:e}}),a=e=>s.post("/news/insert",e),u=e=>s.post("/news/update",e),w=e=>s.post("/news/del",{id:e}),d=(e,t)=>s.post("/news/updateStatus",{id:e,tui:t});export{a,o as b,w as d,r as g,d as t,u};

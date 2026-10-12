@@ -1,0 +1,75 @@
+<?php /*a:1:{s:63:"D:\web\php\thinkphp\corp-web\www\view\kcadmin\sys\password.html";i:1788613080;}*/ ?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>修改密码</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/kcadmin/js/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" href="/static/kcadmin/css/style.css">
+</head>
+<body>
+<div class="container-fluid p-3">
+    <div class="panel-heading">修改密码</div>
+    <form id="pwdForm" method="post" class="col-md-6">
+        <div class="form-group">
+            <label>原密码(psdpwd)</label>
+            <input type="password" class="form-control easyui-validatebox" name="psdpwd" id="psdpwd" data-options="required:true" placeholder="请输入原密码">
+        </div>
+        <div class="form-group">
+            <label>新密码(newpwd)</label>
+            <input type="password" class="form-control easyui-validatebox" name="newpwd" id="newpwd" data-options="required:true" placeholder="请输入新密码(6-20位)">
+        </div>
+        <div class="form-group">
+            <label>确认密码(cfmpwd)</label>
+            <input type="password" class="form-control easyui-validatebox" name="cfmpwd" id="cfmpwd" data-options="required:true" placeholder="请再次输入新密码">
+        </div>
+        <button type="button" class="btn btn-primary" id="submitBtn">提交</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+<script src="/static/kcadmin/js/easyui/jquery.easyui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
+<script src="/static/kcadmin/js/common.js"></script>
+<script>
+var LOGIN_URL = '<?php echo url("login/index"); ?>';
+</script>
+
+<script>
+    $(function() {
+        $('#submitBtn').click(function() {
+            var psdpwd = $('#psdpwd').val();
+            var newpwd = $('#newpwd').val();
+            var cfmpwd = $('#cfmpwd').val();
+            if (!psdpwd || !newpwd || !cfmpwd) {
+                alert('请填写完整信息');
+                return;
+            }
+            if (psdpwd.length < 6 || psdpwd.length > 20) {
+                alert('原密码长度为6-20个字符');
+                return;
+            }
+            if (newpwd.length < 6 || newpwd.length > 20) {
+                alert('新密码长度为6-20个字符');
+                return;
+            }
+            if (newpwd !== cfmpwd) {
+                alert('新密码与确认密码不一致');
+                return;
+            }
+            axiosPost(API_BASE + '/sys/updatePassword', {
+                psdpwd: psdpwd,
+                newpwd: newpwd,
+                cfmpwd: cfmpwd
+            }, function(res) {
+                alert(res.msg);
+                localStorage.removeItem('token');
+                localStorage.removeItem('username');
+                top.window.location.href = LOGIN_URL;
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

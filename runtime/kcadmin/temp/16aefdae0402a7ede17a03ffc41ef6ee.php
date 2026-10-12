@@ -1,0 +1,55 @@
+<?php /*a:1:{s:60:"D:\web\php\thinkphp\corp-web\www\view\kcadmin\sys\about.html";i:1788671442;}*/ ?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/kcadmin/css/style.css">
+    <script src="/static/kcadmin/ueditor/ueditor.config.js"></script>
+    <script src="/static/kcadmin/ueditor/ueditor.all.min.js"></script>
+</head>
+<body>
+<div class="container-fluid p-3">
+    <div class="panel-heading">关于我们</div>
+    <form id="aboutForm" method="post">
+        <div class="form-group">
+            <label>内容(content)</label>
+            <script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
+        </div>
+        <button type="button" class="btn btn-primary" id="submitBtn">提交</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
+<script src="/static/kcadmin/js/common.js"></script>
+<script>
+var UEDITOR_SERVER_URL = '<?php echo url("ueditor/index"); ?>?token=' + (localStorage.getItem('token') || '');
+</script>
+
+<script>
+    var ue = UE.getEditor('editor',{serverUrl: UEDITOR_SERVER_URL,toolbars:[['fullscreen', 'source', '|' , 'undo', 'redo', '|' ,'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|' , 'fontfamily', 'fontsize', '|','simpleupload', 'insertimage', 'emotion','|' , 'insertvideo',  'attachment',  'gmap', '|' ,'link', 'unlink', 'anchor',],['bold', 'italic', '|' , 'underline',  '|' ,'insertorderedlist', 'insertunorderedlist',  '|' ,'fontborder', 'strikethrough',  '|' ,'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', '|' ,  'selectall', 'cleardoc', '|' ,'date', 'time', '|' , 'spechars' ]],initialFrameWidth:null,initialFrameHeight:320,enterTag: 'br',wordCount:false});
+    $(function() {
+        axiosGet(API_BASE + '/sys/aboutinfo', {}, function(res) {
+            //alert(res.msg);
+            if (res.data && res.data.content) {
+                ue.ready(function() {
+                    ue.setContent(res.data.content);
+                });
+            }
+        });
+        $('#submitBtn').click(function() {
+            var content = ue.getContent();
+            if (!content) {
+                alert('内容不能为空');
+                return;
+            }
+            axiosPost(API_BASE + '/sys/aboutsave', { content: content }, function(res) {
+                alert(res.msg);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

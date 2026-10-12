@@ -1,0 +1,48 @@
+body {
+    font-family: "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+}
+#sidebar-wrapper {
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+#sidebar-wrapper.collapsed {
+    min-width: 0;
+    max-width: 0;
+    overflow: hidden;
+}
+.list-group-item {
+    font-size: 14px;
+    padding: 10px 20px;
+}
+.list-group-item:hover {
+    background: #343a40 !important;
+}
+.submenu .list-group-item {
+    font-size: 13px;
+    padding: 8px 20px;
+}
+#mainFrame {
+    min-height: calc(100vh - 120px);
+}
+.panel-heading {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.easyui-datagrid {
+    width: 100%;
+}
