@@ -3,7 +3,7 @@
   RewriteEngine On
 
   RewriteRule ^kcxxadmin/kcadminstatic/(.*)$ kcadminstatic/$1 [L]
-  RewriteRule ^kcxxadmin/indexstatic/(.*)$ indexstatic/$1 [L]
+  RewriteRule ^index/indexstatic/(.*)$ indexstatic/$1 [L]
 
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f

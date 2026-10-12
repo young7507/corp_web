@@ -27,15 +27,15 @@ return [
     
     'ispublic'         => true,
     'sys' => [
-        'sitename' => '麻城市康馨之家养老院',
-		'sitetitle' => '麻城市康馨之家养老院',
-		'key' => '康馨,康馨之家,养老,养老院,康馨之家养老院,麻城,麻城市,麻城市康馨,麻城市康馨之家,麻城市养老,麻城市养老院,麻城市康馨之家养老院',
-		'description' => '麻城市康馨之家养老院',
+        'sitename' => '企业官网',
+		'sitetitle' => '企业官网',
+		'key' => '企业,官网,企业官网',
+		'description' => '企业官网',
         'mail' => 'yangzhaohui@kangxinhome.com',
         'tel' => '0713-2628421',
-        'addr' => '麻城市白果镇景家山路特1号',
+        'addr' => 'xx市xx镇白果大道1号',
         'website' => 'http://education.eyesyang.com/',
-        'icp' => '鄂ICP备2021013641号-1 ',
+        'icp' => '鄂ICP备xxxxxxxx号-1 ',
 		'mnav' => ['home' => '首页','about' => '关于我们', 'contact' => '联系我们1', 'news' => '新闻中心', 'product' => '产品中心1', 'case' => '案例展示1', 'join' => '加入我们1', 'message' => '留言板']
     ],
 ];
