@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # 删掉 Options +FollowSymlinks，InfinityFree免费版经常报错
+  # 1. 匹配 /index、/index/、/index/xxx → 内部指向 public/frontindex.html
+
+  RewriteRule ^kcxxadmin/kcadminstatic/(.*)$ public/kcadminstatic/$1 [L]
+  RewriteRule ^kcxxadmin/indexstatic/(.*)$ public/indexstatic/$1 [L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^index(/.*)?$ public/frontindex.html [QSA,PT,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^kcxxadmin(/.*)?$ public/kcadmin.html [QSA,PT,L]
+
+  # 2. 其他路由转发到public，ThinkPHP
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ public/index.php/$1 [QSA,PT,L]
+</IfModule>
